@@ -21,11 +21,11 @@ public class SignUpFormValidator implements Validator {
     public void validate(Object o, Errors errors) {
 //        TODO email, nickname 검증
         SignUpForm signUpForm = (SignUpForm)errors;
-        if (accountRepository.extistsByEmail(signUpForm.getEmail())) {
+        if (accountRepository.existsByEmail(signUpForm.getEmail())) {
             errors.rejectValue("email","invalid.email", new Object[]{signUpForm.getEmail()}, "이미 사용중인 이메일입니다.");
         }
 
-        if (accountRepository.extistsByNickName(signUpForm.getEmail())) {
+        if (accountRepository.existsByNickName(signUpForm.getEmail())) {
             errors.rejectValue("nickname","invalid.nickname", new Object[]{signUpForm.getNickname()}, "이미 사용중인 닉네임입니다.");
         }
     }
