@@ -68,8 +68,8 @@ class AccountControllerTest {
         Account account = accountRepository.findByEmail("kmjkmj20055@gmail.com");
         assertNotNull(account);
         assertNotEquals(account.getPassword(), "12345678");  // 비번을 평문으로 저장 안함
-
         assertTrue(accountRepository.existsByEmail("kmjkmj20055@gmail.com"));
+        assertNotNull(account.getEmailCheckToken());
         then(javaMailSender).should().send(any(SimpleMailMessage.class));
     }
 }
