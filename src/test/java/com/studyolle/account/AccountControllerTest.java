@@ -112,6 +112,6 @@ class AccountControllerTest {
                 .andExpect(model().attributeExists("nickname"))
                 .andExpect(model().attributeExists("numberOfUser"))
                 .andExpect(view().name("account/checked-email"))
-                .andExpect(authenticated());
+                .andExpect(authenticated().withUsername("mimmi"));
     }
 }

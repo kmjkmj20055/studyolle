@@ -50,7 +50,7 @@ public class AccountController {
     }
 
     @GetMapping("check-email-token")
-    public String checkEmailTocken(String token, String email, Model model) {
+    public String checkEmailToken(String token, String email, Model model) {
         Account account = accountRepository.findByEmail(email);
         String view = "account/checked-email";
 
@@ -64,7 +64,7 @@ public class AccountController {
             return view;
         }
 
-        account.completeSignUp();
+        accountService.login(account);
         model.addAttribute("numberOfUser", accountRepository.count());
         model.addAttribute("nickname", account.getNickname());
 
