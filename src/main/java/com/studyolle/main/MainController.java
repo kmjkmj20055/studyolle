@@ -1,6 +1,7 @@
 package com.studyolle.main;
 
-import com.studyolle.Account;
+import com.studyolle.account.Account;
+import com.studyolle.account.AccountController;
 import com.studyolle.account.CurrentUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
