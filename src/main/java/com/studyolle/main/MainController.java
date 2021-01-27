@@ -23,4 +23,12 @@ public class MainController {
 
         return "index";
     }
+
+    @GetMapping("/login")
+    public String login() {
+
+        //원래 prefix, suffix가 붙어서 templates/login.html 이렇게 되는데
+        // ViewResolver에 의해서 생략된거
+        return "login";
+    }
 }
