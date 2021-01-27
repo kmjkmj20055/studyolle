@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http:thymeleaf.org"
-      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+      xmlns:th="http:thymeleaf.org">
 <head th:replace="fragments.html :: head"></head>
 <body class="bg-light">
 <div th:replace="fragments.html :: main-nav"></div>
@@ -10,7 +9,6 @@
     스터디올레 가입을 완료하려면 <a href="#" th:href="@{/check-email}" class="alert-link">계정 인증 이메일을 확인</a>하세요.
 </div>
 
-
 <div class="container">
     <div class="py-5 text-center">
         <h2>스터디올래</h2>
@@ -18,10 +16,5 @@
 
     <div th:replace="fragments.html :: footer"></div>
 </div>
-<script type="application/javascript">
-    (function () {
-
-    }())
-</script>
 </body>
 </html>
