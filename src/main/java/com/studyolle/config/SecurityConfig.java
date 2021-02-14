@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 ,"check-email-login","check-email-login","login-link").permitAll()
                 .mvcMatchers(HttpMethod.GET,"/profile/*").permitAll()
                 .anyRequest().authenticated();
-        
+
         //formLogin 기능 활성화 (사용가능)
         //http.formLogin()
         http.formLogin()
